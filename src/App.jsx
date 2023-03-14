@@ -69,23 +69,31 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <input
-        type="text"
-        placeholder="Search A Pokemon By Name"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={searchHandler}>Search</button>
-      <br />
-      <div className="cards-container">
-        {loading ? (
-          <div className="loading-circle"></div>
-        ) : error ? (
-          <div className="error">Error</div>
-        ) : (
-          filterList.map((p, index) => <Pokemon item={p} key={index} />)
-        )}
+    <div>
+      <div className="headerImg">
+        <img
+          src="https://img.pokemondb.net/design/avif/header-lg.avif"
+          alt="pokemon database"
+        />
+      </div>
+      <div className="container">
+        <input
+          type="text"
+          placeholder="Search A Pokemon By Name"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button onClick={searchHandler}>Search</button>
+        <br />
+        <div className="cards-container">
+          {loading ? (
+            <div className="loading-circle"></div>
+          ) : error ? (
+            <div className="error">Error</div>
+          ) : (
+            filterList.map((p, index) => <Pokemon item={p} key={index} />)
+          )}
+        </div>
       </div>
     </div>
   );
