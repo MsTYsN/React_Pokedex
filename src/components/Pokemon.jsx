@@ -87,26 +87,6 @@ function Pokemon({ item }) {
             <span className="stat-value">{s.base_stat + s.effort}</span>
           </div>
         ))}
-        {/* <div class="stat">
-          <div class="stat-label">Attack</div>
-          <progress value="85" max="255"></progress>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Defense</div>
-          <progress value="70" max="255"></progress>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Special Attack</div>
-          <progress value="90" max="255"></progress>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Special Defense</div>
-          <progress value="80" max="255"></progress>
-        </div>
-        <div class="stat">
-          <div class="stat-label">Speed</div>
-          <progress value="95" max="255"></progress>
-        </div> */}
       </div>
     </div>
   );

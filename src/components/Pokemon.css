@@ -73,6 +73,7 @@
 progress {
   width: 80px;
   margin: 0 5px;
+  accent-color: #a0e515;
 }
 
 .stat-value {
