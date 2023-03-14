@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 1%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+
+.card p {
+  font-size: 1rem;
+  text-align: center;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.types span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 50px;
+  padding: 5px 10px;
+  margin-right: 5%;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.pokemon-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  width: 70px;
+  font-weight: bold;
+  text-align: left;
+}
+
+progress {
+  width: 80px;
+  margin: 0 5px;
+}
+
+.stat-value {
+  width: 18px;
+  text-align: center;
+}
