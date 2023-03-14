@@ -41,7 +41,7 @@ function App() {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
         const { data } = await axios.get(
-          'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0'
+          'https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0'
         );
         //console.log(data);
         dispatch({ type: 'FETCH_SUCCESS', payload: data.results });
