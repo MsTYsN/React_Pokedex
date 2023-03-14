@@ -78,7 +78,7 @@ function App() {
       </div>
       <div className="container">
         <input
-          type="text"
+          type="search"
           placeholder="Search A Pokemon By Name"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
