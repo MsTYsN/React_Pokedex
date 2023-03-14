@@ -90,8 +90,10 @@ function App() {
             <div className="loading-circle"></div>
           ) : error ? (
             <div className="error">Error</div>
-          ) : (
+          ) : filterList.length > 0 ? (
             filterList.map((p, index) => <Pokemon item={p} key={index} />)
+          ) : (
+            <div className="notFound">0 Results Found</div>
           )}
         </div>
       </div>
