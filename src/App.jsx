@@ -1,7 +1,8 @@
 import './App.css';
 import Pokemon from './components/Pokemon';
 import axios from 'axios';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
+import Search from './components/Search';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -34,8 +35,6 @@ function App() {
     }
   );
 
-  const [search, setSearch] = useState('');
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -56,18 +55,6 @@ function App() {
   //   return;
   // }
 
-  const searchHandler = () => {
-    dispatch({
-      type: 'FILTER_SUCCESS',
-      payload:
-        search !== ''
-          ? pokemonList.filter((p) =>
-              p.name.toLowerCase().includes(search.toLowerCase())
-            )
-          : pokemonList,
-    });
-  };
-
   return (
     <div>
       <div className="headerImg">
@@ -77,13 +64,7 @@ function App() {
         />
       </div>
       <div className="container">
-        <input
-          type="search"
-          placeholder="Search A Pokemon By Name"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button onClick={searchHandler}>Search</button>
+        <Search pokemonList={pokemonList} dispatch={dispatch} />
         <br />
         <div className="cards-container">
           {loading ? (
